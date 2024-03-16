@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"strings"
 	"time"
 )
@@ -39,5 +40,12 @@ func isCircularPalindrome(s string) (result bool) {
 }
 
 func main() {
-	isCircularPalindrome("mAlAyAlaM")
+	fmt.Println("Enter some text:")
+	var input string
+	_, err := fmt.Scan(&input)
+	if err != nil {
+		log.Fatal(err)
+		return
+	}
+	isCircularPalindrome(input)
 }
